@@ -39,3 +39,9 @@ body:
       label: Bug-related data
       description: Any logs, error messages, or malformed output. If the bug only occurs with specific input data, provide a sample of that data.
       render: shell
+      placeholder: |
+        search_parameters = catalog.construct_search_parameters(
+            collections=["phr"],
+            geometry=geometry,
+            max_cloudcover=20,
+        )
