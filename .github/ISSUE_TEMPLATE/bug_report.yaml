@@ -1,5 +1,5 @@
 name: Bug report
-description: Create a bug report to help us improve.
+description: Create a bug report to help us improve
 title: "[BUG]: "
 body:
   - type: markdown
@@ -19,7 +19,7 @@ body:
     attributes:
       label: What happened?
       description: Describe the issue here.
-      placeholder: The bug's impact and what actions were taken. How can we reproduce it? How does the observed behavior differ from the expected behavior?
+      placeholder: The bug's impact and what actions were taken. How does the observed behavior differ from the expected behavior?
     validations:
       required: true
   - type: textarea
@@ -36,12 +36,6 @@ body:
   - type: textarea
     id: data
     attributes:
-      label: Bug-causing data
-      description: Any logs, error messages, screenshots, or malformed output. If the bug only occurs with specific input data, provide a sample of that data.
+      label: Bug-related data
+      description: Any logs, error messages, or malformed output. If the bug only occurs with specific input data, provide a sample of that data.
       render: shell
-      placeholder: |
-        search_parameters = catalog.construct_search_parameters(
-            collections=["phr"],
-            geometry=geometry,
-            max_cloudcover=20,
-        )
