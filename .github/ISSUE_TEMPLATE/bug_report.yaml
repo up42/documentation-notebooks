@@ -1,0 +1,47 @@
+name: Bug report
+description: Create a bug report to help us improve.
+title: "[BUG]: "
+body:
+  - type: markdown
+    attributes:
+      label: Title
+      description: Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact details
+      description: How can we get in touch with you if we need more info?
+      placeholder: email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the issue here.
+      placeholder: The bug's impact and what actions were taken. How can we reproduce it? How does the observed behavior differ from the expected behavior?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Details about the environment where the bug occurred.
+      placeholder: |
+        * Python version: {e.g. 3.8.5}
+        * SDK version: {e.g. 1.2.3}
+        * Installed dependencies and versions: {e.g. requests 2.25.1, numpy 1.19.2}
+        * Jupyter notebook version: {e.g. 6.1.5}
+        * Operating system: {e.g. macOS 11.2, Windows 10, Linux Ubuntu 20.04}
+  - type: textarea
+    id: data
+    attributes:
+      label: Bug-causing data
+      description: Any logs, error messages, screenshots, or malformed output. If the bug only occurs with specific input data, provide a sample of that data.
+      render: shell
+      placeholder: |
+        search_parameters = catalog.construct_search_parameters(
+            collections=["phr"],
+            geometry=geometry,
+            max_cloudcover=20,
+        )
